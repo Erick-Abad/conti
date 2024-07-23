@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Estilos para la tabla tipo Excel */
 #table-content table {
     width: 100%;
@@ -23,4 +24,31 @@
     width: 100%;
     border: none;
     padding: 8px;
+=======
+/* Estilos para la tabla tipo Excel */
+#table-content table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#table-content th, #table-content td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#table-content th {
+    background-color: #007BFF;
+    color: white;
+}
+
+#table-content input {
+    width: 100%;
+    border: none;
+    padding: 8px;
+>>>>>>> f649d0e7eee61a1ec8cd616b9f1759c378bea0d8
 }

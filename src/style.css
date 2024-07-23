@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -161,4 +162,120 @@ button:hover {
         padding: 15px;
         font-size: 18px;
     }
+=======
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('../public/Logo2.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+}
+
+.logo {
+    max-width: 300px; /* Aumenta el tamaño del logo */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 200px; /* Ajusta la distancia entre el logo y el contenido */
+}
+
+#table-content {
+    background-color: transparent; /* Fondo transparente */
+    max-width: 90%; /* Asegura que la tabla no sea demasiado ancha */
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#table-content table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#table-content th, #table-content td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#table-content th {
+    background-color: #007BFF;
+    color: white;
+}
+
+#table-content input {
+    width: 100%;
+    border: none;
+    padding: 8px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 40px; /* Espacio entre el texto y el botón */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Diseño responsivo */
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+        margin-top: 150px; /* Ajusta la distancia entre el logo y el contenido para móviles */
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+>>>>>>> f649d0e7eee61a1ec8cd616b9f1759c378bea0d8
 }
