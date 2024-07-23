@@ -6,6 +6,7 @@
     <title>Mi Proyecto Web</title>
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="src/ExcelLikeTable.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
 </head>
 <body>
     <div class="header">
@@ -21,12 +22,49 @@
         <p>Comencemos a trabajar</p>
         <label for="numArticulos">¿Cuántos artículos vamos a exportar?</label>
         <input type="number" id="numArticulos" min="1">
-        <button id="crearExcel">Aceptar</button>
+        <button id="numArticulosAccept">Aceptar</button>
+    </div>
+
+    <div class="container" id="shipment-form" style="display:none;">
+        <h2>Ingrese el código de SHIPMENT</h2>
+        <input type="text" id="shipmentInput">
+        <button id="shipmentAccept">Aceptar</button>
+    </div>
+
+    <div class="container" id="shipment-confirmation" style="display:none;">
+        <h2>Confirmación de SHIPMENT</h2>
+        <p id="shipment-confirmation-text"></p>
+        <button id="shipmentConfirmYes">Aceptar</button>
+        <button id="shipmentConfirmNo">Rechazar</button>
     </div>
 
     <div class="container" id="table-content" style="display:none;">
-        <div id="exportDiv"></div>
+        <div id="table-container"></div>
+        <div class="button-container">
+            <button id="exportBtn" onclick="exportToExcel()">CREAR EXCEL</button>
+            <button id="resetBtn" onclick="handleReset()">REINICIAR</button>
+            <button id="sendBtn" style="display: none;" onclick="sendEmail()">ENVIAR</button>
+        </div>
         <button id="volver">Volver</button>
+    </div>
+    
+    <!-- Alert Modals -->
+    <div id="alert-modal" class="alert-overlay" style="display:none;">
+        <div class="alert-container">
+            <div class="alert">
+                <p id="alert-message"></p>
+                <button onclick="closeAlert()">SEGUIR</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="completion-modal" class="alert-overlay" style="display:none;">
+        <div class="alert-container">
+            <div class="alert">
+                <p id="completion-message"></p>
+                <button onclick="closeCompletionAlert()">CERRAR</button>
+            </div>
+        </div>
     </div>
 
     <script src="src/app.js"></script>

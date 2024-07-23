@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -88,6 +87,56 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* Alert Styles */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-container {
+    background: #f8d7da; /* Light red background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 80%;
+    animation: showAlert 0.3s ease-in-out;
+}
+
+@keyframes showAlert {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.alert-container p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #721c24; /* Dark red text */
+}
+
+.alert-container button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Diseño responsivo */
